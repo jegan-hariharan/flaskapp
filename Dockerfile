@@ -1,4 +1,4 @@
-FROM python:3.10-alpine
+FROM python:latest
 WORKDIR /application
 COPY . /application
 RUN pip install -r dependencies.txt
