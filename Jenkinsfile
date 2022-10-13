@@ -10,8 +10,8 @@ pipeline {
             steps { 
                   
         
-                sh 'docker build -t flaskapp:$BUILD_NUMBER .'
-                sh 'docker tag flaskapp:$BUILD_NUMBER jegansanthosh/newrepo:$BUILD_NUMBER'
+                sh 'docker build --network host -t flaskapp:$BUILD_NUMBER .'
+                sh 'docker tag flaskapp:$BUILD_NU MBER jegansanthosh/newrepo:$BUILD_NUMBER'
             } 
         }
         stage('push our image') { 
